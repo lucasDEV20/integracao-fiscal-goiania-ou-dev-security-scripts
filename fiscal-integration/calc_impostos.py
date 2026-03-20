@@ -1,19 +1,14 @@
+# Cálculo de Impostos - Padrão Goiânia/GO
+v_servico = 2500.0
+aliquota = 5.0  # 5% de ISS
 
-def calcular_iss_goiania(valor_bruto, aliquota):
-    """
-    Calcula o ISS retido e o valor líquido do serviço.
-    Exemplo para serviços prestados em Goiânia/GO.
-    """
-    valor_iss = valor_bruto * (aliquota / 100)
-    valor_liquido = valor_bruto - valor_iss
-    
-    return {
-        "valor_servico": valor_bruto,
-        "iss_retido": valor_iss,
-        "total_receber": valor_liquido
-    }
+# Lógica de cálculo
+v_iss = v_servico * (aliquota / 100)
+v_liquido = v_servico - v_iss
 
-# Teste: R$ 5.000,00 com alíquota de 5%
-resultado = calcular_iss_goiania(5000, 5)
-print(f"ISS: R$ {resultado['iss_retido']:.2f}")
-print(f"Total: R$ {resultado['total_receber']:.2f}")
+# Exibição dos resultados
+print("--- TESTE FISCAL GOIÂNIA ---")
+print(f"Valor do Serviço: R$ {v_servico:.2f}")
+print(f"Imposto (ISS): R$ {v_iss:.2f}")
+print(f"Valor Líquido: R$ {v_liquido:.2f}")
+print("----------------------------")
