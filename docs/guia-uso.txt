@@ -1,0 +1,7 @@
+GUIA DE USO RÁPIDO
+
+1. FISCAL: Use o arquivo .md para configurar seu cliente SOAP (Java/Node).
+2. LOGICA: O script Python serve para validar cálculos antes de gerar o XML.
+3. SEGURANÇA: O arquivo .bat deve ser rodado como Administrador no servidor Windows.
+
+Dica: Nunca suba chaves privadas ou certificados reais neste repositório.
